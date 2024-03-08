@@ -1,15 +1,19 @@
 //
-// Created by Juan Hurtado on 7/03/24.
+// Created by Juan Hurtado on 8/03/24.
 //
+
+#ifndef LEARNING_OPENGL_SHADER_FROM_FILE_H
+#define LEARNING_OPENGL_SHADER_FROM_FILE_H
+
 
 #include <fstream>
 #include <string>
 #include <iostream>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include <sstream>
+#include "../example.h"
 
-class ShaderFromFile {
+class ShaderFromFile: example {
     struct ShadersSource {
         std::string vertexShader;
         std::string fragmentShader;
@@ -137,7 +141,7 @@ public:
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
         glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-        window = glfwCreateWindow(800, 500, "Hello world!", nullptr, nullptr);
+        window = glfwCreateWindow(800, 500, "Shader from file", nullptr, nullptr);
         if (!window) {
             fprintf(stderr, "Window couldn't be created.");
             return -1;
@@ -166,9 +170,4 @@ public:
     }
 };
 
-
-
-int main() {
-    ShaderFromFile().run();
-    return 0;
-}
+#endif //LEARNING_OPENGL_SHADER_FROM_FILE_H

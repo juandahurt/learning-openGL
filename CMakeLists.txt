@@ -6,8 +6,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_executable(learning_openGL
-        src/1-hello-world/hello_world.cpp
-        src/2-shader-from-file/shader-from-file.cpp)
+        src/example.h
+        src/main.cpp
+        src/1-hello-world/hello_world.h
+        src/2-shader-from-file/shader-from-file.h)
 
 find_package(PkgConfig)
 
