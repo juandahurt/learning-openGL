@@ -9,7 +9,8 @@ add_executable(learning_openGL
         src/example.h
         src/main.cpp
         src/1-hello-world/hello_world.h
-        src/2-shader-from-file/shader-from-file.h)
+        src/2-shader-from-file/shader-from-file.h
+        src/3-error-handling/error-handling.h)
 
 find_package(PkgConfig)
 

@@ -6,7 +6,7 @@
 #define LEARNING_OPENGL_EXAMPLE_H
 
 
-class example {
+class Example {
     int run() { return 0; }
 };
 
