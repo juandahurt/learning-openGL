@@ -11,7 +11,7 @@
 #include "../example.h"
 
 
-class HelloWorld: example {
+class HelloWorld: Example {
     unsigned int vbo[1]; // vertex buffer object
     unsigned int vao[1]; // vertex array object
 
@@ -135,6 +135,8 @@ public:
         }
 
         glfwTerminate();
+
+        return 0;
     }
 };
 
