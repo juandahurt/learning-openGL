@@ -1,5 +1,5 @@
 # Error handling
-In this particular example, what I did was basically to wrap some 
+In this particular example, what I did was basically to wrap some
 openGL function calls using a `macro`
 
 ```c++
@@ -18,5 +18,5 @@ this inside a loop to get all of them.
 
 ### Error in this example
 See that, if we run this example in debugging mode, we will get an assertion failure
-because we are trying to draw elements of type `GL_INT`, but we are using 
+because we are trying to draw elements of type `GL_INT`, but we are using
 `unsinged int`.
