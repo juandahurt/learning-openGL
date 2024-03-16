@@ -1,7 +1,6 @@
 .idea
 cmake-build-debug
 .DS_Store
-learning_openGL
 *.cmake
 CMakeCache.txt
 Makefile
