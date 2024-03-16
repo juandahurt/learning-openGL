@@ -8,7 +8,7 @@ The actual buffer data si stored in the VBO and the properties (layout) of it,
  are stored in the VAO.
 
 The resulting triangle is the following:
-![hello-world.png](demo%2Fhello-world.png)
+![hello-world.png](resources%2Fhello-world.png)
 
 *note: it is possible to remove the smoothness of the fragment shader, using the flat kyeword
 but that will show only the color of the last vertex.*
