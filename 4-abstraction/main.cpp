@@ -7,6 +7,8 @@
 #include "VertexBuffer.h"
 #include "Renderer.h"
 #include "IndexBuffer.h"
+#include "VertexBufferLayout.h"
+#include "VertexArray.h"
 
 struct ShadersSource {
     std::string vertexShader;
@@ -106,7 +108,7 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-    window = glfwCreateWindow(800, 500, "Error handling", nullptr, nullptr);
+    window = glfwCreateWindow(800, 500, "Abstraction", nullptr, nullptr);
     if (!window) {
         fprintf(stderr, "Window couldn't be created.");
         return -1;
@@ -114,7 +116,6 @@ int main() {
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);
 
-    glewExperimental = GL_TRUE;
     if (glewInit() != GLEW_OK) {
         fprintf(stderr, "GLEW couldn't be initialized!\n");
         return -1;
@@ -132,17 +133,24 @@ int main() {
             1, 3, 2
     };
 
-    // allocate the VAO and get the ID
-    unsigned int vao;
-    glGenVertexArrays(1, &vao);
-    glBindVertexArray(vao);
+//    glGenVertexArrays(1, &vao);
+//    glBindVertexArray(vao);
 
     // allocate VBO and get the ID
     auto vertexBuffer = VertexBuffer(&vertices, sizeof(vertices));
+
+    auto layout = VertexBufferLayout();
+    layout.addElement<float>(2);
+
+    /// allocate VAO
+    auto vertexArray = VertexArray();
+    vertexArray.addBuffer(vertexBuffer, layout);
+
+
     // specifying the buffer layout
     // position layout
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), nullptr);
-    glEnableVertexAttribArray(0);
+//    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), nullptr);
+//    glEnableVertexAttribArray(0);
 
     // index buffer
 //    unsigned int iao;

@@ -8,7 +8,11 @@ add_executable(4_abstraction main.cpp
         VertexBuffer.h
         VertexBuffer.cpp
         IndexBuffer.h
-        IndexBuffer.cpp)
+        IndexBuffer.cpp
+        VertexBufferLayout.h
+        VertexBufferLayout.cpp
+        VertexArray.h
+        VertexArray.cpp)
 
 find_package(PkgConfig)
 
