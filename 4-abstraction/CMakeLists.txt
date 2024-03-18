@@ -12,7 +12,9 @@ add_executable(4_abstraction main.cpp
         VertexBufferLayout.h
         VertexBufferLayout.cpp
         VertexArray.h
-        VertexArray.cpp)
+        VertexArray.cpp
+        Shader.h
+        Shader.cpp)
 
 find_package(PkgConfig)
 
