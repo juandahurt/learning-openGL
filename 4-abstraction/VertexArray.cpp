@@ -23,8 +23,6 @@ void VertexArray::addBuffer(const VertexBuffer &vertexBuffer, const VertexBuffer
         GLCall(glEnableVertexAttribArray(i));
         offset += element.count * sizeof(float); // TODO: add func that return size of type
     }
-//    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), nullptr);
-//    glEnableVertexAttribArray(0);
 }
 
 void VertexArray::bind() const {
