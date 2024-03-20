@@ -5,7 +5,7 @@
 #ifndef INC_4_ABSTRACTION_VERTEXBUFFERLAYOUT_H
 #define INC_4_ABSTRACTION_VERTEXBUFFERLAYOUT_H
 
-#include "Renderer.h"
+#include "core.h"
 #include <vector>
 
 struct LayoutElement {

@@ -62,11 +62,12 @@ int main() {
     float b = 1;
     float increment = 0.1;
 
-    while (!glfwWindowShouldClose(window)) {
-        glClear(GL_COLOR_BUFFER_BIT);
+    Renderer renderer;
 
+    while (!glfwWindowShouldClose(window)) {
+        renderer.clear();
+        renderer.render(vertexBuffer, indexBuffer, layout);
         shader.uniform4<float>("u_color", 1.0, b, 0.5, 1);
-        GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
 
         if (b >= 1)
             increment = -0.01;

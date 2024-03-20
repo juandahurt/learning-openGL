@@ -14,7 +14,9 @@ add_executable(4_abstraction main.cpp
         VertexArray.h
         VertexArray.cpp
         Shader.h
-        Shader.cpp)
+        Shader.cpp
+        core.h
+        Renderer.cpp)
 
 find_package(PkgConfig)
 

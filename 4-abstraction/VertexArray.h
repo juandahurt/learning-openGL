@@ -5,7 +5,7 @@
 #ifndef INC_4_ABSTRACTION_VERTEXARRAY_H
 #define INC_4_ABSTRACTION_VERTEXARRAY_H
 
-#include "Renderer.h"
+#include "core.h"
 #include "VertexBuffer.h"
 #include "VertexBufferLayout.h"
 

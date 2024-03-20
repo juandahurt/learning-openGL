@@ -5,7 +5,7 @@
 #ifndef INC_4_ABSTRACTION_INDEXBUFFER_H
 #define INC_4_ABSTRACTION_INDEXBUFFER_H
 
-#include "Renderer.h"
+#include "core.h"
 
 class IndexBuffer {
 private:
@@ -14,6 +14,7 @@ private:
 public:
     IndexBuffer(const unsigned int *data, unsigned int count);
     ~IndexBuffer();
+    unsigned int count() const;
     void bind();
     void unbind();
 };
