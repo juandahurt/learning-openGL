@@ -15,4 +15,4 @@ to look with the desired aspect ratio :)
 
 ---
 ### Output
-![Image](res/Screenshot 2024-03-24 at 2.38.45 PM.png)
+![Image](res/textures.png)
